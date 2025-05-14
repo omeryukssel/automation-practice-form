@@ -30,7 +30,7 @@ public class FormDoldurmaTest {
 
     @Test
     void formDoldurTest() throws InterruptedException {
-        formAnasayfa.elemanGozukeneKadarBekle(formAnasayfa.nameCss);
+       formAnasayfa.elemanGozukeneKadarBekle(formAnasayfa.nameCss);
         formAnasayfa.yaziYaz(formAnasayfa.nameCss,"John");
         formAnasayfa.yaziYaz(formAnasayfa.lastNameCss, "Doe");
         formAnasayfa.yaziYaz(formAnasayfa.emailCss,"john.doe@example.com");
@@ -39,6 +39,7 @@ public class FormDoldurmaTest {
         formAnasayfa.yaziYaz(formAnasayfa.phoneNumberCss,"1551234567");
         formAnasayfa.tusaBasKombinasyon(formAnasayfa.dateOfBirthCss,Keys.CONTROL,"a");
         formAnasayfa.yaziYaz(formAnasayfa.dateOfBirthCss,"22 September 1995");
+        formAnasayfa.elemanGozukeneKadarBekle(formAnasayfa.subjectsCss);
         driver.switchTo().activeElement().sendKeys(Keys.ENTER);
         formAnasayfa.yaziYaz(formAnasayfa.subjectsCss,"Computer Science");
         driver.switchTo().activeElement().sendKeys(Keys.ENTER);
@@ -46,24 +47,23 @@ public class FormDoldurmaTest {
         driver.switchTo().activeElement().sendKeys(Keys.ENTER);
         formAnasayfa.yaziYaz(formAnasayfa.subjectsCss,"History");
         driver.switchTo().activeElement().sendKeys(Keys.ENTER);
-        formAnasayfa.elemanGozukeneKadarBekle(formAnasayfa.hobbiesSportCheckbxBtnCss);
+        Thread.sleep(3000);
         formAnasayfa.tusaTikla(formAnasayfa.hobbiesSportCheckbxBtnCss);
         formAnasayfa.tusaTikla(formAnasayfa.hobbiesMusicCheckbxBtnCss);
         formAnasayfa.tusaTikla(formAnasayfa.hobbiesReadingCheckbxBtnCss);
         formAnasayfa.elemanGozukeneKadarBekleId(formAnasayfa.uploadPictureBtnId);
         formAnasayfa.dosyaGonder(formAnasayfa.uploadPictureBtnId,formAnasayfa.path);
+        formAnasayfa.elemanGozukeneKadarBekle(formAnasayfa.currentAdressCss);
         formAnasayfa.yaziYaz(formAnasayfa.currentAdressCss,"789 Oak Street, Apartment 12B");
         formAnasayfa.jsTikla(formAnasayfa.submitBtnId);
+        formAnasayfa.elemanGozukeneKadarBekle(formAnasayfa.closeBtnCss);
+        formAnasayfa.tusaTikla(formAnasayfa.closeBtnCss);
 
 
 
     }
-    @Test
-    void test(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        formAnasayfa.jsTikla(formAnasayfa.submitBtnId);
-
-    }
+   
+    
 
 
 
