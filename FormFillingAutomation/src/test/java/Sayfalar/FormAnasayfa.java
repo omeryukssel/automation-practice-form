@@ -22,6 +22,7 @@ public class FormAnasayfa extends Sayfa {
     public final String selectCityCss="div[id='stateCity-wrapper'] div:nth-child(3)";
     public final String submitBtnId="submit";
     public final String path="C:\\Users\\Omer Yuksel\\Desktop\\staj\\resim.jpeg";
+    public final String closeBtnCss="#closeLargeModal";
 
 
 
