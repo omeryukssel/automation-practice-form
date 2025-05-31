@@ -66,7 +66,7 @@ public class FormDoldurmaTest {
     
 
 
-
+    @AFterEach
     void tearDown(){
         driver.close();
     }
